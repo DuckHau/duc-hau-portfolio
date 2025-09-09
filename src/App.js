@@ -177,7 +177,7 @@ const Portfolio = () => {
               <a href="https://github.com/DuckHau" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Github size={24} />
               </a>
-              <a href="href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" " className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Mail size={24} />
               </a>
               <a href="tel:0703625820" className="text-gray-600 hover:text-blue-600 transition-colors">
