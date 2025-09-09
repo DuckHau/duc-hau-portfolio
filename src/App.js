@@ -426,7 +426,7 @@ const Portfolio = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <a href="href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" " className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
                 <Mail className="text-blue-600 mb-4" size={40} />
                 <h3 className="font-semibold text-gray-800 mb-2">Email</h3>
                 <p className="text-gray-600">phqtquin3@gmail.com</p>
