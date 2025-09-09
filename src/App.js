@@ -452,7 +452,7 @@ const Portfolio = () => {
                 to your team's success.
               </p>
               <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" ?subject=Backend Developer Opportunity"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com&subject=Backend%20Developer%20Opportunity"
                 className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <Mail className="mr-2" size={20} />
