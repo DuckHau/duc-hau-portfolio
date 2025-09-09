@@ -177,7 +177,7 @@ const Portfolio = () => {
               <a href="https://github.com/DuckHau" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Github size={24} />
               </a>
-              <a href="mailto:phqtquin3@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" " className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Mail size={24} />
               </a>
               <a href="tel:0703625820" className="text-gray-600 hover:text-blue-600 transition-colors">
@@ -426,7 +426,7 @@ const Portfolio = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <a href="mailto:phqtquin3@gmail.com" className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+              <a href="href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" " className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
                 <Mail className="text-blue-600 mb-4" size={40} />
                 <h3 className="font-semibold text-gray-800 mb-2">Email</h3>
                 <p className="text-gray-600">phqtquin3@gmail.com</p>
@@ -452,7 +452,7 @@ const Portfolio = () => {
                 to your team's success.
               </p>
               <a 
-                href="mailto:phqtquin3@gmail.com?subject=Backend Developer Opportunity"
+                href="href="https://mail.google.com/mail/?view=cm&fs=1&to=phqtquin3@gmail.com" ?subject=Backend Developer Opportunity"
                 className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <Mail className="mr-2" size={20} />
