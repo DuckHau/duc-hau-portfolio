@@ -204,4 +204,73 @@ function App() {
           </div>
 
           <p className="text-slate-400 leading-relaxed max-w-xl text-sm md:text-base border-l border-slate-800 pl-4">
-            A Software Engineering graduate specializing in Backend Development with hands-on
+            A Software Engineering graduate specializing in Backend Development with hands-on experience building and optimizing low-latency RESTful APIs using <strong className="text-teal-400">Node.js, NestJS, and TypeScript</strong>. Proven capability in managing large-scale database interactions and deploying unstructured object storage solutions natively during intensive industry tracks.
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] text-slate-400 pt-2">
+            <div className="bg-slate-950/40 px-4 py-3 rounded-lg border border-slate-900 hover:border-teal-500/20 hover:bg-slate-955/80 transition-all duration-300">
+              <span className="text-teal-500 font-bold">EMAIL //</span> phqtquin3@gmail.com
+            </div>
+            <div className="bg-slate-950/40 px-4 py-3 rounded-lg border border-slate-900 hover:border-teal-500/20 hover:bg-slate-955/80 transition-all duration-300">
+              <span className="text-teal-500 font-bold">PHONE //</span> 0703 625 820
+            </div>
+            <div className="bg-slate-950/40 px-4 py-3 rounded-lg border border-slate-900 hover:border-teal-500/20 hover:bg-slate-955/80 transition-all duration-300 sm:col-span-2">
+              <span className="text-teal-500 font-bold">GEOLOCATION //</span> District 8, Ho Chi Minh City, VN
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4 pt-4">
+            <a href="https://github.com/DuckHau" target="_blank" rel="noreferrer" className="bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs tracking-widest font-bold px-6 py-3.5 rounded-lg border border-slate-800 hover:border-slate-700 hover:scale-[1.02] active:scale-95 duration-300 flex items-center gap-2 shadow-xl">
+              [ GIT_HUB ]
+            </a>
+            <a href="#projects" className="bg-gradient-to-r from-teal-500 via-teal-400 to-cyan-500 hover:opacity-90 text-slate-950 text-xs tracking-widest font-black px-6 py-3.5 rounded-lg hover:scale-[1.02] active:scale-95 duration-300 shadow-lg shadow-teal-500/10">
+              INITIALIZE_PROJECTS ➔
+            </a>
+          </div>
+        </div>
+        
+        <div className="hidden md:block relative group">
+          <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-teal-400 to-cyan-500 absolute -inset-0.5 blur opacity-10 group-hover:opacity-30 transition-opacity duration-700"></div>
+          <div className="w-72 h-72 rounded-xl bg-slate-950 border border-slate-900 flex flex-col items-center justify-center p-8 text-center space-y-6 shadow-2xl relative z-10 group-hover:border-teal-500/30 group-hover:scale-[1.01] transition-all duration-500">
+            <div className="text-4xl filter drop-shadow-[0_0_10px_rgba(45,212,191,0.5)]">⚙️</div>
+            <div className="text-xs font-bold text-teal-400 tracking-[0.25em] uppercase">SYSTEM_ARCH</div>
+            <div className="text-[10px] text-slate-400 space-y-1 w-full font-mono">
+              <p className="bg-slate-900/50 py-1.5 rounded border border-slate-900">Node.js // NestJS</p>
+              <p className="bg-slate-900/50 py-1.5 rounded border border-slate-900">TypeScript / C#</p>
+              <p className="bg-slate-900/50 py-1.5 rounded border border-slate-900">MongoDB // Relational Indexing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <h2 className="text-3xl font-black tracking-[0.1em] mb-3 bg-gradient-to-r from-slate-100 via-slate-300 to-slate-500 bg-clip-text text-transparent uppercase">01 // CORE_COMPETENCIES</h2>
+          <div className="h-[1px] w-12 bg-teal-500/60 mx-auto rounded-full"></div>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { tag: "LANGUAGES", desc: "TypeScript, JavaScript, C#, HTML/CSS, SQL" },
+            { tag: "BACKEND_FRAMEWORKS", desc: "Node.js, NestJS, Express.js, RESTful API Engineering" },
+            { tag: "DATABASES_STORE", desc: "MongoDB (Mongoose ODM), SQL Server, MySQL (Database Index Optimization)" },
+            { tag: "INFRA_METHODOLOGIES", desc: "Git/GitHub, Postman, Swagger UI, MinIO Object Storage, Figma, Jira, StarUML" }
+          ].map((skill, index) => (
+            <div key={index} className="bg-slate-950/40 p-6 rounded-xl border border-slate-900 hover:border-teal-500/20 hover:-translate-y-1.5 transition-all duration-300 group shadow-xl backdrop-blur-sm">
+              <div className="text-[10px] font-bold text-teal-400 tracking-wider mb-3 group-hover:text-cyan-300 transition-colors">
+                ⚡ SYS_MODULE: 0{index + 1}
+              </div>
+              <h3 className="font-bold text-sm mb-4 text-slate-200 uppercase tracking-wide">{skill.tag}</h3>
+              <p className="text-xs text-slate-400 leading-relaxed border-t border-slate-900 pt-3">{skill.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="experience" className="relative z-10 bg-slate-950/20 border-y border-slate-900 py-24 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="mb-16">
+            <h2 className="text-3xl font-black tracking-[0.1em] uppercase">02 // WORK_CHRONOLOGY</h2>
+          </div>
+
+          <div className="relative border-l-2 border-slate-90
