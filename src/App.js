@@ -5,14 +5,15 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const canvasRef = useRef(null);
 
-  // 📝 CONFIGURATION AREA: THAY LINK THẬT CỦA BẠN VÀO ĐÂY
+  // 📝 CONFIGURATION AREA: UPDATE YOUR LINKS HERE
   const myEmail = "phqtquin3@gmail.com";
-  const myLinkedInUrl = "www.linkedin.com/in/duckhau"; 
+  const myLinkedInUrl = "https://www.linkedin.com/in/duckhau"; 
   const githubProfileUrl = "https://github.com/DuckHau";
   const hrmProjectUrl = "https://github.com/DuckHau/hrm-system"; 
-  const mobileApiProjectUrl = "https://github.com/DuckHau/AppTechShop"; 
+  const mobileAppProjectUrl = "https://github.com/DuckHau/AppTechShop"; 
   const webProjectUrl = "https://github.com/DuckHau/TechShop"; 
 
+  // 1. SMOOTH SCROLL EFFECT (LENIS VIA CDN)
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js';
@@ -45,7 +46,7 @@ function App() {
     };
   }, []);
 
- 
+  // 2. BACKGROUND NETWORKING EFFECT (DIGITAL CANVAS BACKGROUND)
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -111,7 +112,7 @@ function App() {
     };
   }, []);
 
-
+  // 3. SPOTLIGHT TRACKING EFFECT
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -123,22 +124,22 @@ function App() {
   const projects = [
     {
       title: "HRM System (Human Resource Management)",
-      tech: ["Node.js", "NestJS", "MongoDB", "JWT", "TypeScript"],
-      desc: "Architected a scalable backend infrastructure for an enterprise-level HRM system featuring comprehensive personnel management. Integrated secure authentication and session management using JWT and custom Guard middlewares to lock down sensitive system endpoints. Enforced strict data validation using TypeScript data transfer layers.",
+      tech: ["Node.js", "Next.js", "MongoDB", "JWT", "TypeScript"],
+      desc: "Architected a scalable backend infrastructure for a comprehensive HRM system. Engineered secure user authentication and session handling utilizing JWT and custom Guard middlewares to protect sensitive system endpoints. Structured strict data validation layers using TypeScript classes and validation pipes to guarantee data integrity.",
       github: hrmProjectUrl,
       type: "backend"
     },
     {
-      title: "TechShop Electronics Mobile App API",
-      tech: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Postman"],
-      desc: "Engineered a robust RESTful API framework tailored for e-commerce mobile configurations. Designed highly optimized data schemas via Mongoose ODM to fluidly process expansive product catalogs. Conducted complete end-to-end automated functional testing using Postman to secure zero-error production deployment.",
-      github: mobileApiProjectUrl,
-      type: "backend"
+      title: "TechShop Electronics Cross-Platform Mobile App",
+      tech: ["Flutter", "Dart", "Node.js", "Express.js", "MongoDB"],
+      desc: "Built a native-feel cross-platform mobile commerce application using Flutter and Dart. Engineered complete integration with a centralized MongoDB data source via a high-performance RESTful API backend, facilitating streamlined browsing, cart logic, and checkout flows synchronized in real-time with the web administrative core.",
+      github: mobileAppProjectUrl,
+      type: "fullstack"
     },
     {
-      title: "TechShop Electronics E-Commerce Website",
+      title: "TechShop Electronics E-Commerce Website & Admin Panel",
       tech: ["MERN Stack", "React.js", "Node.js", "Express.js", "MongoDB"],
-      desc: "Contributed directly to the core full-stack system layout and developed modular backend microservices to govern dynamic multi-parameter filtering, robust customer profile verification pipelines, and secure transactional checkout workflows. Cleared performance thresholds via systematic query turning.",
+      desc: "Contributed to the full-stack system layout and developed an intensive administrative platform for unified store management. Engineered robust backend APIs to handle automated query indexing for multi-parameter product filters and centralized fulfillment logs to process and manage orders dispatched concurrently from both web and mobile channels.",
       github: webProjectUrl,
       type: "fullstack"
     }
@@ -149,7 +150,7 @@ function App() {
   return (
     <div className="bg-[#030712] text-slate-100 min-h-screen font-sans antialiased relative overflow-x-hidden selection:bg-teal-500 selection:text-slate-900">
       
-      
+      {/* CANVAS BACKDROP BACKGROUND */}
       <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0 opacity-40" />
 
       {/* GLOW SPOTLIGHT EFFECT */}
@@ -160,7 +161,7 @@ function App() {
         }}
       />
 
-    
+      {/* HEADER NAVIGATION */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#030712]/70 border-b border-slate-900 flex items-center justify-between px-6 h-20 transition-all">
         <div className="text-xl font-mono font-black tracking-widest bg-gradient-to-r from-teal-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">
           &lt;DUC HAU /&gt;
@@ -179,7 +180,7 @@ function App() {
         </nav>
       </header>
 
-     
+      {/* HERO SECTION */}
       <section id="about" className="relative z-10 max-w-6xl mx-auto px-4 pt-24 pb-20 md:pt-40 md:pb-32 flex flex-col md:flex-row items-center justify-between gap-16">
         <div className="max-w-2xl space-y-8">
           
@@ -200,24 +201,26 @@ function App() {
           </p>
 
           <p className="text-slate-400 leading-relaxed max-w-xl text-base md:text-lg border-l-2 border-slate-800 pl-4">
-            A Software Engineering graduate specializing in Backend Development with hands-on experience in building and optimizing high-performance RESTful APIs using <span className="text-teal-400 font-bold">Node.js, NestJS, and TypeScript</span>. Possesses a proven capability in managing large-scale database interactions and integrating modern unstructured storage solutions natively during industry tracks.
+            A Software Engineering graduate specializing in Backend Development with hands-on experience in building and optimizing high-performance RESTful APIs using <span className="text-teal-400 font-bold">Node.js, NestJS, and TypeScript</span>. Competent in engineering decentralized full-stack ecosystems seamlessly integrated with cross-platform <span className="text-teal-400 font-bold">Flutter</span> applications and real-time synchronized data logs.
           </p>
           
+          {/* CONTACT DETAILS MATRIX */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-400 pt-2">
-            <a href={`mailto:${myEmail}`} className="flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300">
+            <a href={`mailto:${myEmail}`} className="cursor-pointer block z-40 flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300">
               <span className="text-teal-500">📥 EMAIL:</span> {myEmail}
             </a>
-            <a href={myLinkedInUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300">
+            <a href={myLinkedInUrl} target="_blank" rel="noreferrer" className="cursor-pointer block z-40 flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300">
               <span className="text-teal-500">🔗 LINKEDIN:</span> Profile
             </a>
             <div className="flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300">
               <span className="text-teal-500">📞 PHONE:</span> 0703 625 820
             </div>
-            <div className="flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300">
+            <div className="flex items-center gap-3 bg-slate-900/30 px-4 py-3 rounded-xl border border-slate-800/60 hover:border-teal-500/30 hover:bg-slate-900/60 transition-all duration-300 sm:col-span-2">
               <span className="text-teal-500">📍 LOCATION:</span> District 8, Ho Chi Minh City, VN
             </div>
           </div>
 
+          {/* ACTION CTAs */}
           <div className="flex gap-4 pt-4">
             <a href={githubProfileUrl} target="_blank" rel="noreferrer" className="bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs tracking-widest px-6 py-4 rounded-xl transition-all border border-slate-800 hover:border-slate-700 flex items-center gap-2 hover:scale-[1.02] active:scale-95 duration-300 shadow-xl">
               <span>🐙</span> GITHUB_PROFILE
@@ -228,22 +231,22 @@ function App() {
           </div>
         </div>
         
-
+        {/* CORE TECH STACK DISPLAY */}
         <div className="hidden md:block relative group">
           <div className="w-80 h-80 rounded-3xl bg-gradient-to-br from-teal-500 to-cyan-500 absolute -inset-1 blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
           <div className="w-72 h-72 rounded-2xl bg-[#050b18]/95 border border-slate-800/80 flex flex-col items-center justify-center p-8 text-center space-y-6 shadow-2xl relative z-10 group-hover:border-teal-500/30 group-hover:scale-[1.03] transition-all duration-500">
             <div className="text-6xl filter drop-shadow-[0_0_15px_rgba(20,184,166,0.4)] animate-pulse">⚡</div>
             <div className="font-mono text-teal-400 text-base font-black tracking-widest">CORE_STACK</div>
             <div className="text-[11px] text-slate-400 font-mono space-y-1.5 w-full">
-              <p className="bg-slate-900/80 py-1.5 rounded-lg border border-slate-800/50">Node.js • NestJS</p>
-              <p className="bg-slate-900/80 py-1.5 rounded-lg border border-slate-800/50">TypeScript</p>
+              <p className="bg-slate-900/80 py-1.5 rounded-lg border border-slate-800/50">Node.js • NestJS • Flutter</p>
+              <p className="bg-slate-900/80 py-1.5 rounded-lg border border-slate-800/50">TypeScript • Dart</p>
               <p className="bg-slate-900/80 py-1.5 rounded-lg border border-slate-800/50">MongoDB • SQL</p>
             </div>
           </div>
         </div>
       </section>
 
-
+      {/* CORE COMPETENCIES MATRIX */}
       <section id="skills" className="relative z-10 max-w-6xl mx-auto px-4 py-24">
         <div className="text-center max-w-2xl mx-auto mb-20">
           <h2 className="text-4xl font-black tracking-tight mb-4 bg-gradient-to-r from-slate-100 to-slate-400 bg-clip-text text-transparent uppercase font-mono">Core Competencies</h2>
@@ -252,8 +255,8 @@ function App() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: "💻", title: "Languages", desc: "TypeScript, JavaScript, C#, HTML/CSS, SQL" },
-            { icon: "⚙️", title: "Frameworks", desc: "Node.js, NestJS, Express.js, RESTful API Development" },
+            { icon: "💻", title: "Languages", desc: "TypeScript, JavaScript, Dart, C#, HTML/CSS, SQL" },
+            { icon: "⚙️", title: "Frameworks & SDKs", desc: "Node.js, NestJS, Flutter (Mobile), Express.js, Next.js" },
             { icon: "🗄️", title: "Databases", desc: "MongoDB (Mongoose ODM), SQL Server, MySQL (Database Index Optimization)" },
             { icon: "🛠️", title: "Tools & Infra", desc: "Git/GitHub, Postman, Swagger UI, MinIO Object Storage, Figma, Jira, StarUML" }
           ].map((skill, index) => (
@@ -268,6 +271,7 @@ function App() {
         </div>
       </section>
 
+      {/* TIMELINE EXPERIENCES CHRONOLOGY */}
       <section id="experience" className="relative z-10 bg-[#040914]/40 border-y border-slate-900 py-24 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4">
           <div className="mb-16">
@@ -292,8 +296,8 @@ function App() {
                 {[
                   "Designed and developed core Contact and Form modules using NestJS to construct high-performance RESTful APIs capable of handling complex business logic patterns efficiently.",
                   "Deployed centralized system file storage solutions integrating MinIO Object Storage alongside optimized MongoDB models to process unstructured data objects fluidly.",
-                  "Integrated automated API engineering documentation routines via Swagger, standardizing incoming request/response validation nodes and cutting dev-to-test iteration delays by 25%.",
-                  "Optimized structural API routing loops and fine-tuned relational database configurations to maximize throughput metrics and general user experience responses."
+                  "Integrated automated API documentation routines via Swagger, standardizing incoming request/response validation nodes and cutting dev-to-test iteration delays by 25%.",
+                  "Optimized structural API routing loops and fine-tuned database index configurations to maximize throughput metrics and general user experience responses."
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-3 items-start hover:text-slate-200 transition-colors duration-200">
                     <span className="text-teal-400 font-black">⚡</span>
@@ -306,28 +310,23 @@ function App() {
         </div>
       </section>
 
-      
+      {/* KEY PROJECTS SECTIONS */}
       <section id="projects" className="relative z-10 max-w-6xl mx-auto px-4 py-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <h2 className="text-4xl font-black tracking-tight mb-2 font-mono uppercase">Featured Productions</h2>
-            <p className="text-slate-400 font-mono text-xs">A collection of custom backend systems and application architectures built natively</p>
+            <p className="text-slate-400 font-mono text-xs">A collection of custom backend systems and synchronized application architectures built natively</p>
           </div>
           
           {/* NAV FILTER TOGGLE BUTTONS */}
           <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-900 self-start">
-            {['all', 'backend', 'fullstack'].map((tab) => (
-              <button 
-                key={tab}
-                onClick={() => setActiveTab(tab)} 
-                className={`px-5 py-2 rounded-lg text-xs font-mono font-bold transition-all duration-300 ${activeTab === tab ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-950 shadow-md scale-105' : 'text-slate-400 hover:text-slate-200'}`}
-              >
-                {tab === 'all' ? 'SHOW_ALL' : tab === 'backend' ? 'PURE_BACKEND' : 'FULL_STACK'}
-              </button>
-            ))}
+            <button onClick={() => setActiveTab('all')} className={`px-5 py-2 rounded-lg text-xs font-mono font-bold transition-all duration-300 ${activeTab === 'all' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-950 shadow-md scale-105' : 'text-slate-400 hover:text-slate-200'}`}>SHOW_ALL</button>
+            <button onClick={() => setActiveTab('backend')} className={`px-5 py-2 rounded-lg text-xs font-mono font-bold transition-all duration-300 ${activeTab === 'backend' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-950 shadow-md scale-105' : 'text-slate-400 hover:text-slate-200'}`}>PURE_BACKEND</button>
+            <button onClick={() => setActiveTab('fullstack')} className={`px-5 py-2 rounded-lg text-xs font-mono font-bold transition-all duration-300 ${activeTab === 'fullstack' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-950 shadow-md scale-105' : 'text-slate-400 hover:text-slate-200'}`}>FULL_STACK</button>
           </div>
         </div>
 
+        {/* PROJECTS ROW DISPLAY */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div 
@@ -356,6 +355,7 @@ function App() {
         </div>
       </section>
 
+      {/* EDUCATION & ACADEMIC ACHIEVEMENTS */}
       <section className="relative z-10 bg-[#040914]/40 border-t border-slate-900 py-20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-12">
           <div>
@@ -389,6 +389,7 @@ function App() {
         </div>
       </section>
 
+      {/* LOGISTICS FOOTER */}
       <footer className="relative z-10 border-t border-slate-900 text-center py-8 text-xs text-slate-600 font-mono uppercase tracking-widest">
         &copy; 2026 Designed & Built by Tieu Trong Duc Hau. System status: Optimal.
       </footer>
